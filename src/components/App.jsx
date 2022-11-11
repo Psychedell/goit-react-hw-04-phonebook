@@ -34,9 +34,9 @@ export const App = () => {
     );
     if (findContact) {
       alert(`${contact.name} is already in contacts.`);
-    } else {
-      setContacts(prevState => [contact, ...prevState]);
+      return;
     }
+    setContacts(prevState => [contact, ...prevState]);
   };
 
   const changeFilter = e => {
